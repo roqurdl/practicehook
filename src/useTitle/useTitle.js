@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 
-const useTitle = (initTitle) => {
+export const useTitle = (initTitle) => {
   const [title, setTitle] = useState(initTitle);
   const updateTitle = () => {
     const htmlTitle = document.querySelector(`title`);
@@ -20,5 +19,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
