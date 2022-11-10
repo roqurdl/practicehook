@@ -1,12 +1,11 @@
 import { useState } from "react";
-import "./App.css";
 
 const contents = [
   { tab: "Section 1", content: "I'm section 1" },
   { tab: "Section 2", content: "I'm section 2" },
 ];
 
-const useTabs = (initTab, allTabs) => {
+export const useTabs = (initTab, allTabs) => {
   const [currentIndex, setCurrentIndex] = useState(initTab);
   if (!allTabs || !Array.isArray(allTabs)) {
     return;
@@ -35,5 +34,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
