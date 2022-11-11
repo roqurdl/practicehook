@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import "./App.css";
 
 const useClick = (onClick) => {
   const element = useRef();
@@ -28,5 +27,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
