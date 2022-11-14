@@ -1,7 +1,4 @@
-import { useEffect, useRef } from "react";
-import "./App.css";
-
-const useConfirm = (message = "", confirm, cancel) => {
+export const useConfirm = (message = "", confirm, cancel) => {
   if (typeof confirm !== "function") {
     return;
   }
@@ -29,5 +26,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

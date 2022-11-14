@@ -3,9 +3,9 @@ Make React Hook using useState and useEffect
 --[x] useInput
 --[x] useTabs
 --[x] useTitle
---[] useClick
+--[X] useClick
 --[] useHover
---[] useConfirm
+--[X] useConfirm
 --[] usePreventLeave
 --[] useBeforeLeave
 --[] useFadeIn
