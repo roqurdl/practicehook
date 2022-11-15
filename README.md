@@ -7,7 +7,7 @@ Make React Hook using useState and useEffect
 --[X] useHover
 --[X] useConfirm
 --[X] usePreventLeave
---[] useBeforeLeave
+--[X] useBeforeLeave
 --[] useFadeIn
 --[] useNetwork
 --[] useScroll

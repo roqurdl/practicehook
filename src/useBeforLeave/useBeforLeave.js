@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "./App.css";
 
 const useBeforLeave = (onBefore) => {
   const handle = (e) => {
@@ -27,5 +26,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
