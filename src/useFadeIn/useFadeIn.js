@@ -1,4 +1,3 @@
-import "./App.css";
 import { useRef, useEffect } from "react";
 
 const useFadeIn = (duration = 1, delay = 0) => {
@@ -26,5 +25,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

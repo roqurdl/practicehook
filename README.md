@@ -8,7 +8,7 @@ Make React Hook using useState and useEffect
 --[X] useConfirm
 --[X] usePreventLeave
 --[X] useBeforeLeave
---[] useFadeIn
+--[X] useFadeIn
 --[] useNetwork
 --[] useScroll
 --[] useFullscreen
