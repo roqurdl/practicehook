@@ -8,7 +8,7 @@ const useFadeIn = (duration = 1, delay = 0) => {
       current.style.transition = `opacity ${duration}}s ease-in-out ${delay}s`;
       current.style.opacity = 1;
     }
-  }, []);
+  });
   if (typeof duration !== "number" || typeof delay !== "number") {
     return;
   }

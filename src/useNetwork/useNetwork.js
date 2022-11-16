@@ -1,4 +1,3 @@
-import "./App.css";
 import { useState, useEffect } from "react";
 
 const useNetwork = () => {
@@ -32,5 +31,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
