@@ -1,4 +1,3 @@
-import "./App.css";
 import { useRef } from "react";
 
 const useFullScreen = (callback) => {
@@ -55,5 +54,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
