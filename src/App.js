@@ -1,34 +1,41 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useRef } from "react";
 
-const useNetwork = () => {
-  const [state, setState] = useState(navigator.onLine);
-  const handleChange = () => {
-    setState(navigator.onLine);
+const useFullScreen = (callback) => {
+  const element = useRef();
+  const triggerFull = () => {
+    if (element.current) {
+      element.current.requestFullscreen();
+      if (callback && typeof callback === "funtion") {
+        callback(true);
+      }
+    }
   };
-  function checkSensor() {
-    window.addEventListener(`online`, handleChange);
-    window.addEventListener(`offline`, handleChange);
-  }
-  function removeSensor() {
-    window.removeEventListener(`online`, handleChange);
-    window.removeEventListener(`offline`, handleChange);
-  }
-  useEffect(() => {
-    checkSensor();
-    removeSensor();
-  }, []);
-  return state;
+  const exitFull = () => {
+    document.exitFullscreen();
+    if (callback && typeof callback === "funtion") {
+      callback(false);
+    }
+  };
+  return { element, triggerFull, exitFull };
 };
 
 function App() {
-  const netWorkChange = (online) => {
-    console.log(online ? "OnLine" : "OffLine");
+  const onFulls = (isFull) => {
+    console.log(isFull ? `Full` : `small`);
   };
-  const onLine = useNetwork(netWorkChange);
+  const { element, triggerFull, exitFull } = useFullScreen(onFulls);
   return (
     <div className="App">
-      <h1>{onLine ? `Online` : `Offline`}</h1>
+      <div ref={element}>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg"
+          style={{ width: "500px", height: "500px" }}
+          alt="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg"
+        />
+        <button onClick={exitFull}>Exit Full</button>
+      </div>
+      <button onClick={triggerFull}>Full Screen</button>
     </div>
   );
 }
