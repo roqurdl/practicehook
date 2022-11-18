@@ -1,4 +1,3 @@
-import "./App.css";
 import defaultAxios from "axios";
 import { useEffect, useState } from "react";
 
@@ -47,5 +46,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

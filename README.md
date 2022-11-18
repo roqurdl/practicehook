@@ -13,4 +13,4 @@ Make React Hook using useState and useEffect
 --[X] useScroll
 --[X] useFullscreen
 --[X] useNotification
---[] useAxios
+--[X] useAxios
