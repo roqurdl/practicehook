@@ -11,6 +11,6 @@ Make React Hook using useState and useEffect
 --[X] useFadeIn
 --[X] useNetwork
 --[X] useScroll
---[] useFullscreen
---[] useNotification
+--[X] useFullscreen
+--[X] useNotification
 --[] useAxios

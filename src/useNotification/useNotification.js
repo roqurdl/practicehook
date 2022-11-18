@@ -1,6 +1,3 @@
-import "./App.css";
-import { useRef } from "react";
-
 const useNotification = (title, options) => {
   if (!("Notification" in window)) {
     return;
@@ -31,5 +28,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
